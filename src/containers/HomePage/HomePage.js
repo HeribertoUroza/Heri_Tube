@@ -39,10 +39,24 @@ class HomePage extends Component {
 
     render() {
         console.log(this.state)
+        const { results } = this.state
         return (
             <>
-                HomePage
-                <SearchRCard />
+                
+                
+                {
+                    results.map(( e, i ) => {
+                        return(
+                            <SearchRCard key={i} 
+                                img={e.snippet.thumbnails.high.url}
+                                title={e.snippet.title}
+                                desc={e.snippet.description}
+                                publishedAt={e.snippet.publishedAt}
+                                path={e.id.videoId}
+                            />
+                        )
+                    })
+                }
             </>
         )
     }
