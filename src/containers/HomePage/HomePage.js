@@ -27,14 +27,14 @@ class HomePage extends Component {
                 pageToken: ''
             }
         })
-        .then( res => {
-            this.setState({
-                results: res.data.items
+            .then(res => {
+                this.setState({
+                    results: res.data.items
+                })
             })
-        })
-        .catch( err => {
-            console.log(err.toString())
-        })
+            .catch(err => {
+                console.log(err.toString())
+            })
     }
 
     render() {
@@ -42,21 +42,25 @@ class HomePage extends Component {
         const { results } = this.state
         return (
             <>
-                
-                
-                {
-                    results.map(( e, i ) => {
-                        return(
-                            <SearchRCard key={i} 
-                                img={e.snippet.thumbnails.high.url}
-                                title={e.snippet.title}
-                                desc={e.snippet.description}
-                                publishedAt={e.snippet.publishedAt}
-                                path={e.id.videoId}
-                            />
-                        )
-                    })
-                }
+                <div className='container'>
+                    <div className='row' style={{ "justifyContent": "center" }}>
+                        {
+                            results.map((e, i) => {
+                                return (
+                                    <SearchRCard key={i}
+                                        img={e.snippet.thumbnails.high.url}
+                                        title={e.snippet.title}
+                                        desc={e.snippet.description}
+                                        publishedAt={e.snippet.publishedAt}
+                                        path={e.id.videoId}
+
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
             </>
         )
     }
