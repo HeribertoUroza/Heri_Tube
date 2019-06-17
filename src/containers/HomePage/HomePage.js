@@ -42,23 +42,40 @@ class HomePage extends Component {
         const { results } = this.state
         return (
             <>
-                <div className='container'>
-                    <div className='row' style={{ "justifyContent": "center" }}>
-                        {
-                            results.map((e, i) => {
-                                return (
-                                    <SearchRCard key={i}
-                                        img={e.snippet.thumbnails.high.url}
-                                        title={e.snippet.title}
-                                        desc={e.snippet.description}
-                                        publishedAt={e.snippet.publishedAt}
-                                        path={e.id.videoId}
-
-                                    />
-                                )
-                            })
-                        }
+                <nav>
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" required />
+                                    
+                            </div>
+                        </form>
                     </div>
+                </nav>
+
+
+                <div className='container'>
+                    <div className=''>
+                        <div className='row' style={{ "justifyContent": "center" }}>
+                            {
+                                results.map((e, i) => {
+                                    return (
+                                        <SearchRCard key={i}
+                                            img={e.snippet.thumbnails.high.url}
+                                            title={e.snippet.title}
+                                            desc={e.snippet.description}
+                                            publishedAt={e.snippet.publishedAt}
+                                            path={e.id.videoId}
+
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </>
