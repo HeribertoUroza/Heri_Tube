@@ -14,7 +14,7 @@ class App extends Component {
             <Route path='/' component={NavBar}/>
           <Switch>
             <Route path='/home' exact component={HomePage} />
-            <Route path='/video/:videoID' exact component={VideoPage} />
+            <Route path='/video' exact component={VideoPage} />
           </Switch>
         </HashRouter>
       </>

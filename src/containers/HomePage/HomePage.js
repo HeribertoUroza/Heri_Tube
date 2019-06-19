@@ -41,20 +41,9 @@ class HomePage extends Component {
         console.log(this.state)
         const { results } = this.state
         return (
-            <>
-                <nav>
-                    <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field">
-                                <input id="search" type="search" required />
-                                    
-                            </div>
-                        </form>
-                    </div>
-                </nav>
-
-
-                <div className='container'>
+            <>  
+                
+                {/* <div className='container'>
                     <div className=''>
                         <div className='row' style={{ "justifyContent": "center" }}>
                             {
@@ -72,12 +61,8 @@ class HomePage extends Component {
                                 })
                             }
                         </div>
-
                     </div>
-
-
-                </div>
-
+                </div> */}
             </>
         )
     }
