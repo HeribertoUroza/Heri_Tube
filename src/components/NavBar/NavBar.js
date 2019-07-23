@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import vid_player from '../../icons/video_player.png'
 import M from 'materialize-css'
+import './navbar.css';
 
 class NavBar extends Component {
 
@@ -18,16 +19,16 @@ class NavBar extends Component {
         return (
             <>
                 <nav className="nav-extended">
-                    <div className="nav-wrapper" style={{ textAlign: 'center',}}>
-                        <Link to="/" ><img src={vid_player} alt='vid_player' style={{maxHeight: '40px'}}/></Link>
+                    <div className="nav-wrapper _nav_bar">
+                        <Link to="/" ><img src={vid_player} alt='vid_player' /></Link>
                     </div>
                     <div className="nav-content">
                         <ul className="tabs tabs-transparent">
-                            <Link to="/add"><li className="tab"><span className="active">Add</span></li></Link>
+                            <Link to="/add"><li className="tab"><span className="active nav-font">Add</span></li></Link>
                             {
                                 searchQueries.map( (e, i) => {
                                     return (
-                                        <Link to="/add" key={i}><li className="tab"><span className="active">{e}</span></li></Link>
+                                        <Link to="/add" key={i}><li className="tab"><span className="active nav-font">{e}</span></li></Link>
                                     )
                                 })
                             }

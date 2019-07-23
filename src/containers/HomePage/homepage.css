@@ -17,7 +17,7 @@
 @media (min-width: 576px) { 
     .hello_message {
         text-align: center;
-        font-size: 100px;
+        font-size: 80px;
     }
 }
 

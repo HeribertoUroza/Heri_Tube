@@ -1,0 +1,29 @@
+._nav_bar {
+    text-align: center;
+}
+
+img {
+    max-height: 40px;
+}
+
+@media (min-width: 576px) { 
+    
+    img {
+        max-height: 60px;
+    }
+    
+    .nav-font {
+        line-height: 50px;
+        font-size: 1.25rem;
+    }
+
+}
+
+
+/* @media (min-width: 768px) { ... }
+
+
+@media (min-width: 992px) { ... }
+
+
+@media (min-width: 1200px) { ... } */
