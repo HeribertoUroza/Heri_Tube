@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import config from '../../config.json'
 
 // import SearchRCard from '../../components/SearchR/SearchRCard'
+import './homepage.css'
 
 class HomePage extends Component {
 
@@ -41,7 +42,11 @@ class HomePage extends Component {
         
         return (
             <>  
-                Home Page
+                <div className='container-fluid content_center'>
+                    <div className='hello_message'>
+                        WELCOME TO MY APP!!!
+                    </div>
+                </div>
             </>
         )
     }

@@ -1,0 +1,31 @@
+
+.content_center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hello_message {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+@media (min-width: 576px) { 
+    .hello_message {
+        text-align: center;
+        font-size: 100px;
+    }
+}
+
+
+/* @media (min-width: 768px) { ... }
+
+
+@media (min-width: 992px) { ... }
+
+
+@media (min-width: 1200px) { ... } */
