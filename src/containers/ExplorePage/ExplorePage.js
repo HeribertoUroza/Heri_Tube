@@ -9,7 +9,7 @@ class ExplorePage extends Component {
             <>
                 <div className='search'>
                     <form>
-                        <input className='search_input' placeholder='Eplore Videos Here!'></input>
+                        <input className='search_input' placeholder='Explore Videos Here!'></input>
                     </form>
                 </div>
 
@@ -18,7 +18,11 @@ class ExplorePage extends Component {
                     <SearchRCard />
                     <SearchRCard />
                     <SearchRCard />
-                    
+                    <SearchRCard />
+                    <SearchRCard />
+                    <SearchRCard />
+                    <SearchRCard />
+
                 </div>
         
             </>

@@ -1,7 +1,44 @@
 
 .card {
-    /* margin: 2.5rem; */
-    margin: 2rem;
+    margin: 1rem;
     max-width: 18rem;
     min-width: 17rem;
 }
+
+@media (min-width: 425px) { 
+    
+    .card {
+        margin-top: 1.5rem;
+        margin: .8rem;
+        max-width: 12rem;
+        min-width: 11rem;
+    }
+}
+
+@media (min-width: 576px) { 
+    
+    .card {
+        margin-top: 2rem;
+        max-width: 18rem;
+        min-width: 17rem;
+    }
+}
+
+
+@media (min-width: 768px) { 
+    
+    .card {
+        max-width: 24rem;
+        min-width: 23rem;
+    }
+}
+
+
+@media (min-width: 1024px) { 
+
+    .card {
+        margin: 2rem;
+        max-width: 18rem;
+        min-width: 17rem;
+    }
+} 
