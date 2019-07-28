@@ -15,6 +15,10 @@ class ExplorePage extends Component {
 
                 <div className='card_container'>
                     <SearchRCard />
+                    <SearchRCard />
+                    <SearchRCard />
+                    <SearchRCard />
+                    
                 </div>
         
             </>

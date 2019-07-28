@@ -1,6 +1,7 @@
 import React from 'react';
 // import Moment from 'react-moment';
 // import { Link } from 'react-router-dom';
+import './searchrcard.css'
 
 const SearchRCard = props => {
     return (
