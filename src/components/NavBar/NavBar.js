@@ -25,6 +25,7 @@ class NavBar extends Component {
                     <div className="nav-content">
                         <ul className="tabs tabs-transparent">
                             <Link to="/add"><li className="tab"><span className="active nav-font">Add</span></li></Link>
+                            <Link to="/explore"><li className="tab"><span className="active nav-font">Explore</span></li></Link>
                             {
                                 searchQueries.map( (e, i) => {
                                     return (
