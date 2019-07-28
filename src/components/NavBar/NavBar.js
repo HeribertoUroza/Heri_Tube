@@ -20,7 +20,7 @@ class NavBar extends Component {
             <>
                 <nav className="nav-extended">
                     <div className="nav-wrapper _nav_bar">
-                        <Link to="/" ><img src={vid_player} alt='vid_player' /></Link>
+                        <Link to="/" ><img className='logo_img' src={vid_player} alt='vid_player' /></Link>
                     </div>
                     <div className="nav-content">
                         <ul className="tabs tabs-transparent">
