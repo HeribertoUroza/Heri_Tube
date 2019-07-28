@@ -5,16 +5,22 @@ import React from 'react';
 const SearchRCard = props => {
     return (
         <>
-        {/* <div className="card mx-3 my-3" style={{"width": "18rem"}}>
-            <Link to={`/video/${props.path}`}>
-                <img src={props.img} className="card-img-top" alt={props.title} />
-            </Link>
-                <div className="card-body">
-                    <h5>{props.title}</h5>
-                    <p className="card-text">{props.desc}</p>
+
+            <div className="card">
+                <div className="card-image waves-effect waves-block waves-light">
+                    <img className="activator" src="https://i.ytimg.com/an_webp/q3eFXeO62oo/mqdefault_6s.webp?du=3000&sqp=CI779ukF&rs=AOn4CLB62lAfcRmKC8tI2bBOPdscw3_PDw" alt='youtube_image' />
                 </div>
-                <Moment fromNow><p>{props.publishedAt}</p></Moment>
-        </div> */}
+
+                <div className="card-content">
+                    <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
+                    <p>link in here</p>
+                </div>
+                <div className="card-reveal">
+                    <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+            </div>
+
         </>
     )
 }
