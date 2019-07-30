@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import SearchRCard from '../../components/SearchR/SearchRCard'
 import './explorepage.css'
+import { youtTubeAPI } from '../../services/functions'
 
 class ExplorePage extends Component {
+
+    state = {
+        searchQuery: ''
+    }
 
     render() {
         return (

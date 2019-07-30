@@ -20,3 +20,5 @@ const youTubeAPI = (searchQuery) => {
             console.log(err.toString())
         })
 }
+
+export { youTubeAPI }
