@@ -4,17 +4,28 @@ import './explorepage.css'
 import { youtTubeAPI } from '../../services/functions'
 
 class ExplorePage extends Component {
-
-    state = {
-        searchQuery: ''
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            searchQuery: ''
+        }
     }
 
+    handleInput = (e) => {
+        this.setState({ 
+            [e.target.name]: e.target.value 
+        });
+    }
+
+
     render() {
+        console.log(this.state.searchQuery)
         return (
             <>
                 <div className='search'>
                     <form>
-                        <input className='search_input' placeholder='Explore Videos Here!'></input>
+                        <input className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} ></input>
                     </form>
                 </div>
 
