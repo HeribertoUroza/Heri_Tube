@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ytKey } from './config'
 
 const youTubeAPI = (searchQuery) => {
-    axios({
+    return axios({
             method: 'get',
             url: 'https://www.googleapis.com/youtube/v3/search',
             params: {
@@ -11,7 +11,7 @@ const youTubeAPI = (searchQuery) => {
                 videoDefinition: 'high',
                 type: 'video',
                 videoEmbeddable: 'true',
-                key: ytKey.REACT_APP_API_KEY,
+                key: ytKey.API_KEY,
                 q: searchQuery,
                 pageToken: ''
             }

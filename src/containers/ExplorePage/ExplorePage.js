@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchRCard from '../../components/SearchR/SearchRCard'
 import './explorepage.css'
-import { youtTubeAPI } from '../../services/functions'
+import { youTubeAPI } from '../../services/functions'
 
 class ExplorePage extends Component {
     constructor(props) {
@@ -13,9 +13,25 @@ class ExplorePage extends Component {
     }
 
     handleInput = (e) => {
+        console.log(e.key)
         this.setState({ 
             [e.target.name]: e.target.value 
         });
+    }
+
+    handleEnterPress = (e) => {
+        e.preventDefault();
+        youTubeAPI(this.state.searchQuery)
+            .then( res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err.toString())
+            })
+            
+        // if(this.state.searchQuery !== ''){
+            
+        // }
     }
 
 
@@ -24,8 +40,8 @@ class ExplorePage extends Component {
         return (
             <>
                 <div className='search'>
-                    <form>
-                        <input className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} ></input>
+                    <form type='submit' onClick={this.handleEnterPress}>
+                        <input type='text' className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} ></input>
                     </form>
                 </div>
 
