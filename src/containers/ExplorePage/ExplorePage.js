@@ -24,16 +24,12 @@ class ExplorePage extends Component {
         let { searchQuery } = this.state;
 
         youTubeAPI(searchQuery)
-            .then( res => {
-                this.setState({videos: res.data.items})
+            .then(res => {
+                this.setState({ videos: res.data.items })
             })
             .catch(err => {
                 console.log(err.toString())
             })
-            
-        // if(this.state.searchQuery !== ''){
-            
-        // }
     }
 
 
@@ -41,12 +37,11 @@ class ExplorePage extends Component {
     render() {
         console.log(this.state)
         let { videos } = this.state;
-
         return (
             <>
                 <div className='search'>
-                    <form onClick={this.handleEnterPress}>
-                        <input type='text' className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} ></input>
+                    <form onSubmit={this.handleEnterPress}>
+                        <input type='text' className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery}></input>
                     </form>
                 </div>
 
@@ -54,7 +49,7 @@ class ExplorePage extends Component {
                 {
                     videos.map(( e, i ) => {
                         return (
-                            <SearchRCard />
+                            <SearchRCard key={i} title={e.snippet.title} description={e.snippet.description} thumbnails={e.snippet.thumbnails.high.url}/>
                         )
                     })
                 }
