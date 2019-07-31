@@ -8,22 +8,24 @@ class ExplorePage extends Component {
         super(props)
     
         this.state = {
-            searchQuery: ''
+            searchQuery: '',
+            videos: []
         }
     }
 
     handleInput = (e) => {
-        console.log(e.key)
         this.setState({ 
             [e.target.name]: e.target.value 
         });
     }
 
     handleEnterPress = (e) => {
-        e.preventDefault();
-        youTubeAPI(this.state.searchQuery)
+        e.preventDefault()
+        let { searchQuery } = this.state;
+
+        youTubeAPI(searchQuery)
             .then( res => {
-                console.log(res)
+                this.setState({videos: res.data.items})
             })
             .catch(err => {
                 console.log(err.toString())
@@ -35,26 +37,27 @@ class ExplorePage extends Component {
     }
 
 
+
     render() {
-        console.log(this.state.searchQuery)
+        console.log(this.state)
+        let { videos } = this.state;
+
         return (
             <>
                 <div className='search'>
-                    <form type='submit' onClick={this.handleEnterPress}>
+                    <form onClick={this.handleEnterPress}>
                         <input type='text' className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} ></input>
                     </form>
                 </div>
 
                 <div className='card_container'>
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-                    <SearchRCard />
-
+                {
+                    videos.map(( e, i ) => {
+                        return (
+                            <SearchRCard />
+                        )
+                    })
+                }
                 </div>
         
             </>
