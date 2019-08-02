@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { ytKey } from './config'
 
+// YouTube API Call
 const youTubeAPI = (searchQuery) => {
     return axios({
             method: 'get',

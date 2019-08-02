@@ -5,6 +5,16 @@
     min-width: 17rem;
 }
 
+.card .card-title {
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+.card .card-content {
+    padding: .8rem;
+}
+
 @media (min-width: 425px) { 
     
     .card {

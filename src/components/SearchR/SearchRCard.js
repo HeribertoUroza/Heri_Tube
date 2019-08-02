@@ -13,9 +13,8 @@ const SearchRCard = props => {
                 </div>
 
                 <div className="card-content">
-                    <i className="material-icons right">more_vert</i>
-                    {/* <span className="card-title activator grey-text text-darken-4">Card Title</span>
-                    <p>link in here</p> */}
+                    <span className="card-title activator grey-text text-darken-4">{props.title}<i className="material-icons right" style={{cursor: 'pointer'}}>more_vert</i></span>
+                    {/* <p>link in here</p> */}
                 </div>
                 <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">{props.title}<i className="material-icons right">close</i></span>
