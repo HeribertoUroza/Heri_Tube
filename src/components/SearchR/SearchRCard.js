@@ -5,11 +5,11 @@ import { Modal } from 'react-materialize'
 import './searchrcard.css'
 
 const SearchRCard = props => {
-    let link = `https://www.youtube.com/embed/tYRS0aXaBC8?autoplay=1&fs=1&origin=http://localhost:3000`
+    let link = `https://www.youtube.com/embed/${props.videoId}?autoplay=1&fs=1&origin=http://localhost:3000`
     let video_player = <>
         <iframe title='yt-video' type="text/html"
             src={link} frameBorder="0"></iframe>
-    </> //width="640" height="360"
+        </>
     return (
         <>
 

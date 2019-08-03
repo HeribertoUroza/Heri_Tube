@@ -60,7 +60,9 @@ class ExplorePage extends Component {
                             <SearchRCard key={i} 
                             title={e.snippet.title} 
                             description={e.snippet.description} 
-                            thumbnails={e.snippet.thumbnails.high.url}/>
+                            thumbnails={e.snippet.thumbnails.high.url}
+                            videoId={e.id.videoId}
+                            />
                         )
                     })
                 }
