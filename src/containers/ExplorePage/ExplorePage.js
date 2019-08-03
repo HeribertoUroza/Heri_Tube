@@ -42,7 +42,14 @@ class ExplorePage extends Component {
             <>
                 <div className='search'>
                     <form onSubmit={this.handleEnterPress}>
-                        <input type='text' className='search_input' placeholder='Explore Videos Here!' onChange={this.handleInput} name='searchQuery' value={this.state.searchQuery} autoComplete='off'></input>
+                        <input  type='text' 
+                                className='search_input' 
+                                placeholder='Explore Videos Here!' 
+                                onChange={this.handleInput} 
+                                name='searchQuery' 
+                                value={this.state.searchQuery} 
+                                autoComplete='off'>
+                        </input>
                     </form>
                 </div>
 
@@ -50,12 +57,15 @@ class ExplorePage extends Component {
                 {
                     videos.map(( e, i ) => {
                         return (
-                            <SearchRCard key={i} title={e.snippet.title} description={e.snippet.description} thumbnails={e.snippet.thumbnails.high.url}/>
+                            <SearchRCard key={i} 
+                            title={e.snippet.title} 
+                            description={e.snippet.description} 
+                            thumbnails={e.snippet.thumbnails.high.url}/>
                         )
                     })
                 }
                 </div>
-        
+
             </>
         )
     }
