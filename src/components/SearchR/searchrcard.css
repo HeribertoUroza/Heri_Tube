@@ -5,6 +5,27 @@
     min-width: 17rem;
 }
 
+.card .card-title {
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+.card .card-content {
+    padding: .8rem;
+}
+
+.modal {
+    width: none;
+    height: auto;
+}
+
+.modal .modal-content {
+    padding: 0%;
+    padding-top: 1rem;
+    text-align: center;
+}
+
 @media (min-width: 425px) { 
     
     .card {
