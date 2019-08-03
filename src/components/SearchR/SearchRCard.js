@@ -5,12 +5,15 @@ import { Modal } from 'react-materialize'
 import './searchrcard.css'
 
 const SearchRCard = props => {
+    let video_player = <h1>HI</h1>
     return (
         <>
 
             <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                    <img className="activator" src={props.thumbnails} alt={props.title} />
+                    <Modal header={video_player} trigger={<img className="activator" src={props.thumbnails} alt={props.title} />}>
+                        TEST
+                    </Modal>
                 </div>
 
                 <div className="card-content">
