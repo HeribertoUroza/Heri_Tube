@@ -5,15 +5,17 @@ import { Modal } from 'react-materialize'
 import './searchrcard.css'
 
 const SearchRCard = props => {
-    let video_player = <h1>HI</h1>
+    let link = `https://www.youtube.com/embed/tYRS0aXaBC8?autoplay=1&fs=1&origin=http://localhost:3000`
+    let video_player = <>
+        <iframe title='yt-video' type="text/html"
+            src={link} frameBorder="0"></iframe>
+    </> //width="640" height="360"
     return (
         <>
 
             <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                    <Modal header={video_player} trigger={<img className="activator" src={props.thumbnails} alt={props.title} />}>
-                        TEST
-                    </Modal>
+                    <Modal header={video_player} trigger={<img className="activator" src={props.thumbnails} alt={props.title} />}></Modal>
                 </div>
 
                 <div className="card-content">

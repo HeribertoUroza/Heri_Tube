@@ -17,7 +17,13 @@
 
 .modal {
     width: none;
-    height: none;
+    height: auto;
+}
+
+.modal .modal-content {
+    padding: 0%;
+    padding-top: 1rem;
+    text-align: center;
 }
 
 @media (min-width: 425px) { 
