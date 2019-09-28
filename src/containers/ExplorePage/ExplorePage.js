@@ -9,7 +9,8 @@ class ExplorePage extends Component {
     
         this.state = {
             searchQuery: '',
-            videos: []
+            videos: [],
+            modalShow: false
         }
     }
 
@@ -31,6 +32,12 @@ class ExplorePage extends Component {
             .catch(err => {
                 console.log(err.toString())
             })
+    }
+
+    handleClose = (e) => {
+        e.preventDefault();
+        console.log('props were passed correctly')
+        console.log(e.props)
     }
 
 

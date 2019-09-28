@@ -15,7 +15,12 @@ const SearchRCard = props => {
 
             <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                    <Modal header={video_player} trigger={<img className="activator" src={props.thumbnails} alt={props.title} />}></Modal>
+                    <Modal  header={props.title} 
+                            trigger={<img className="activator" 
+                                    src={props.thumbnails} 
+                                    alt={props.title} />
+                                    }     
+                    >{video_player}<button>#1sdfsdfg</button></Modal>
                 </div>
 
                 <div className="card-content">
@@ -23,7 +28,7 @@ const SearchRCard = props => {
                     {/* <p>link in here</p> */}
                 </div>
                 <div className="card-reveal">
-                    <span className="card-title grey-text text-darken-4">{props.title}<i className="material-icons right">close</i></span>
+                    <span className="card-title grey-text text-darken-4">{props.title}<i className="material-icons right" >close</i></span>
                     <p>{props.description}</p>
                 </div>
             </div>
