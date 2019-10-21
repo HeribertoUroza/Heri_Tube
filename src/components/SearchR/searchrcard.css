@@ -15,16 +15,10 @@
     padding: .8rem;
 }
 
-.modal {
-    width: none;
+.modal-view {
     height: auto;
 }
 
-.modal .modal-content {
-    padding: 0%;
-    padding-top: 1rem;
-    text-align: center;
-}
 
 @media (min-width: 425px) { 
     

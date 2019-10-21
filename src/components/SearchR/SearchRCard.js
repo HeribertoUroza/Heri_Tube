@@ -15,12 +15,13 @@ const SearchRCard = props => {
 
             <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                    <Modal  header={props.title} 
+                    <Modal  className='modal-view'
+                            header={props.title} 
                             trigger={<img className="activator" 
                                     src={props.thumbnails} 
                                     alt={props.title} />
-                                    }     
-                    >{video_player}<button>#1sdfsdfg</button></Modal>
+                                    }    
+                    >{video_player}</Modal>
                 </div>
 
                 <div className="card-content">
